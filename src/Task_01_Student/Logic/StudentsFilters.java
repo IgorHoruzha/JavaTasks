@@ -4,21 +4,20 @@ import Task_01_Student.Models.Student;
 
 public class StudentsFilters {
 
-
     public Student[] byFaculty( Student[] students,String faculty){
 
         Student[] resultStudents= new Student[0];
 
         for (int i=0;i<students.length;i++){
-            Student currStudent=students[i];
+            Student currentStudent=students[i];
 
-            if (currStudent.getFaculty()==faculty){
+            if (currentStudent.getFaculty().equals(faculty)){
 
                 Student[] tmpArr= new Student[resultStudents.length+1];
                 for (int j=0;j<resultStudents.length;j++){
                     tmpArr[j]=resultStudents[j];
                 }
-                tmpArr[tmpArr.length-1]=currStudent;
+                tmpArr[tmpArr.length-1]=currentStudent;
                 resultStudents=tmpArr;
             }
         }
@@ -32,7 +31,7 @@ public class StudentsFilters {
         for (int i=0;i<students.length;i++){
             Student currStudent=students[i];
 
-            if (currStudent.getGroup()==group){
+            if (currStudent.getGroup().equals(group)){
 
                 Student[] tmpArr= new Student[resultStudents.length+1];
                 for (int j=0;j<resultStudents.length;j++){

@@ -1,8 +1,8 @@
-package Task_04_Enroller.Models;
+package Task_04_Abiturient.Models;
 
 import java.util.Arrays;
 
-public class Enroller {
+public class Abiturient {
     private int id;
     private String surname;
     private String name;
@@ -11,7 +11,7 @@ public class Enroller {
     private String phone;
     private int[] marks;
 
-    public Enroller(int id, String surname, String name, String patronymic, String address, String phone, int[] marks) {
+    public Abiturient(int id, String surname, String name, String patronymic, String address, String phone, int[] marks) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -73,8 +73,19 @@ public class Enroller {
         return marks;
     }
 
+
     public void setMarks(int[] marks) {
         this.marks = marks;
+    }
+    public  int getAvgMark(){
+
+        int sum=0;
+        for (int i=0;i<marks.length;i++){
+            sum+=marks[i];
+        }
+
+        return Math.round(sum/marks.length);
+
     }
 
     @Override

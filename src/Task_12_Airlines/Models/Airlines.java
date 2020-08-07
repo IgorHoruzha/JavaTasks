@@ -63,7 +63,7 @@ public class Airlines {
 
     @Override
     public String toString() {
-        return "Airlines{" +
+        return "AirlinesFilters{" +
                 "destination='" + destination + '\'' +
                 ", flightNumber=" + flightNumber +
                 ", airplaneType='" + airplaneType + '\'' +

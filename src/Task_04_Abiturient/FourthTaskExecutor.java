@@ -1,4 +1,4 @@
-package Task_04_Enroller;
+package Task_04_Abiturient;
 
 public class FourthTaskExecutor {
        public static void start() {  System.out.println("Task 1:");

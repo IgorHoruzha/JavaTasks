@@ -3,14 +3,14 @@ import java.time.LocalDate;
 
 public class Bus {
     String driverInfo;
-    int trainNumber;
+    int busNumber;
     int routeNumber;
     LocalDate  operationStart;
     int mileage;
 
-    public Bus(String driverInfo, int trainNumber, int routeNumber, LocalDate operationStart, int mileage) {
+    public Bus(String driverInfo, int busNumber, int routeNumber, LocalDate operationStart, int mileage) {
         this.driverInfo = driverInfo;
-        this.trainNumber = trainNumber;
+        this.busNumber = busNumber;
         this.routeNumber = routeNumber;
         this.operationStart = operationStart;
         this.mileage = mileage;
@@ -24,12 +24,12 @@ public class Bus {
         this.driverInfo = driverInfo;
     }
 
-    public int getTrainNumber() {
-        return trainNumber;
+    public int getBusNumber() {
+        return busNumber;
     }
 
-    public void setTrainNumber(int trainNumber) {
-        this.trainNumber = trainNumber;
+    public void setBusNumber(int busNumber) {
+        this.busNumber = busNumber;
     }
 
     public int getRouteNumber() {
@@ -60,7 +60,7 @@ public class Bus {
     public String toString() {
         return "Bus{" +
                 "driverInfo='" + driverInfo + '\'' +
-                ", trainNumber=" + trainNumber +
+                ", trainNumber=" + busNumber +
                 ", routeNumber=" + routeNumber +
                 ", operationStart=" + operationStart +
                 ", mileage=" + mileage +
