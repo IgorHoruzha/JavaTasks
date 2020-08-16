@@ -1,6 +1,6 @@
 package Task_01_Student;
 
-import Library.ArraysShower;
+import Library.ArrayTools;
 import Task_01_Student.Logic.Models.GroupedByFacultyThenByCourseModel;
 import Task_01_Student.Logic.StudentsFilters;
 import Task_01_Student.Logic.StudentsGrouper;
@@ -29,12 +29,12 @@ public class FirstTaskExecutor {
            };
 
            System.out.println("All students:");
-           ArraysShower.Show(students);
+           ArrayTools.Display(students);
            StudentsFilters studentsFilters= new StudentsFilters();
 
         System.out.println("a:");
-        var filteredByFaculty=studentsFilters.byFaculty(students,"faculty1");
-           ArraysShower.Show(filteredByFaculty);
+           Student[] filteredByFaculty=studentsFilters.byFaculty(students,"faculty1");
+           ArrayTools.Display(filteredByFaculty);
         System.out.println("b:");
            StudentsGrouper studentsGrouper= new StudentsGrouper();
            GroupedByFacultyThenByCourseModel groupedStudents = studentsGrouper.byGroupThenByCourse(students);
