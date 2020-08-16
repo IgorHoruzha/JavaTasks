@@ -32,25 +32,25 @@ public class FirstTaskExecutor {
 
         //Выводим в консоль все значения по умолчанию.
         System.out.println("All students:");
-        ArrayTools.Display(students);
+        ArrayTools.display(students);
 
         //Вызываем методы обработки с данных и выводим на экран результат.
         System.out.println("Task 1:");
         System.out.println("a:");
         Student[] filteredByFaculty = studentsFilters.byFaculty(students, "faculty1");
-        ArrayTools.Display(filteredByFaculty);
+        ArrayTools.display(filteredByFaculty);
 
         System.out.println("b:");
         GroupedByFacultyThenByCourseModel groupedStudents = studentsGrouper.byGroupThenByCourse(students);
-        ArrayTools.Display(groupedStudents.getFaculties());
+        ArrayTools.display(groupedStudents.getFaculties());
 
         System.out.println("c:");
         Student[] filteredByYear = studentsFilters.burnAfterYear(students,  1995);
-        ArrayTools.Display(filteredByYear);
+        ArrayTools.display(filteredByYear);
 
         System.out.println("d:");
         Student[] filteredByGroup = studentsFilters.byGroup(students,  "group0");
-        ArrayTools.Display(filteredByGroup);
+        ArrayTools.display(filteredByGroup);
 
         System.out.println("==================");
 
