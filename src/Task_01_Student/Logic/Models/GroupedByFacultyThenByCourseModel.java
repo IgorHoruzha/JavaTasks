@@ -1,7 +1,7 @@
 package Task_01_Student.Logic.Models;
 
 
-
+import java.util.Arrays;
 
 public class GroupedByFacultyThenByCourseModel {
 
@@ -17,6 +17,13 @@ public class GroupedByFacultyThenByCourseModel {
 
     public void setFaculties(GroupedFacultyModel[] faculties) {
         this.faculties = faculties;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupedByFacultyThenByCourseModel{" +
+                "faculties=" + Arrays.toString(faculties) +
+                '}';
     }
 }
 

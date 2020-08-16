@@ -2,6 +2,8 @@ package Task_02_Customer.Logic.Models;
 
 import Task_02_Customer.Models.Customer;
 
+import java.util.Arrays;
+
 public class GroupedByNameCustomers {
     String name;
     Customer[] customers;
@@ -25,5 +27,13 @@ public class GroupedByNameCustomers {
 
     public void setCustomers(Customer[] customers) {
         this.customers = customers;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupedByNameCustomers{" +
+                "name='" + name + '\'' +
+                ", customers=" + Arrays.toString(customers) +
+                '}';
     }
 }

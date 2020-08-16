@@ -18,6 +18,9 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
+
+        //Поочереди запускаем выполнение каждой задачи.
+        //Каждая задача была вынесена в отдельный класс что бы не нагромождать Main.
         FirstTaskExecutor.start();
         SecondTaskExecutor.start();
         ThirdTaskExecutor.start();

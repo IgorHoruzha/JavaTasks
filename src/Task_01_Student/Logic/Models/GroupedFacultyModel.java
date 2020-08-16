@@ -2,6 +2,8 @@ package Task_01_Student.Logic.Models;
 
 import Task_01_Student.Models.Student;
 
+import java.util.Arrays;
+
 public class GroupedFacultyModel {
     String facultyName;
     GroupedCourseModel[] courses;
@@ -27,4 +29,11 @@ public class GroupedFacultyModel {
         this.courses = courses;
     }
 
+    @Override
+    public String toString() {
+        return "GroupedFacultyModel{" +
+                "facultyName='" + facultyName + '\'' +
+                ", courses=" + Arrays.toString(courses) +
+                '}';
+    }
 }
