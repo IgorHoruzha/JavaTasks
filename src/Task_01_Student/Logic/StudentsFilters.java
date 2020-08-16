@@ -6,12 +6,12 @@ public class StudentsFilters {
 
     public Student[] byFaculty( Student[] students,String faculty){
 
-        Student[] resultStudents= new Student[0];
+        Student[] resultStudents= new Student[0];//Создаем массив для всех подходящих по факультету студентов
 
-        for (int i=0;i<students.length;i++){
+        for (int i=0;i<students.length;i++){    //Перебераем всех студентов
             Student currentStudent=students[i];
 
-            if (currentStudent.getFaculty().equals(faculty)){
+            if (currentStudent.getFaculty().equals(faculty)){//Если факультет текущего студента равен переданому факультету добавить текущего студента в масив для всех подходящих студентов
 
                 Student[] tmpArr= new Student[resultStudents.length+1];
                 for (int j=0;j<resultStudents.length;j++){
@@ -21,7 +21,8 @@ public class StudentsFilters {
                 resultStudents=tmpArr;
             }
         }
-        return resultStudents;
+
+        return resultStudents;//Возвращаем массив в котором находятся все подходящии по факультету студенты
     }
 
     public Student[] byGroup( Student[] students,String group){
