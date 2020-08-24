@@ -31,7 +31,7 @@ public class TwelfthTaskExecutor {
         System.out.println("c:");
         Airlines[] byDayOfWeekAndTime = airlinesFilters.byDayOfWeekAndDepartureTime(airlines, DayOfWeek.THURSDAY, 10002);
         ArrayTools.display(byDayOfWeekAndTime);
-           
+
         System.out.println("==================");
     }
 }

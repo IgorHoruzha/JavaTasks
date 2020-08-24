@@ -1,5 +1,12 @@
 package com.company;
 
+import Task_01_Student.FirstTaskExecutor;
+import Task_02_Customer.SecondTaskExecutor;
+import Task_03_Patient.ThirdTaskExecutor;
+import Task_04_Abiturient.FourthTaskExecutor;
+import Task_05_Book.FifthTaskExecutor;
+import Task_06_House.SixthTaskExecutor;
+import Task_07_Phone.SeventhTaskExecutor;
 import Task_08_Car.EightTaskExecutor;
 import Task_09_Product.NinthTaskExecutor;
 import Task_10_Train.TenthTaskExecutor;
@@ -12,18 +19,18 @@ public class Main {
 
         //Поочереди запускаем выполнение каждой задачи.
         //Каждая задача была вынесена в отдельный класс что бы не нагромождать Main.
-   //     FirstTaskExecutor.start();
-    //    SecondTaskExecutor.start();
-  //      ThirdTaskExecutor.start();
-   //    FourthTaskExecutor.start();
-//        FifthTaskExecutor.start();
-//       SixthTaskExecutor.start();
-//        SeventhTaskExecutor.start();
-       //EightTaskExecutor.start();
-  //      NinthTaskExecutor.start();
- //      TenthTaskExecutor.start();
- //      EleventhTaskExecutor.start();
-          TwelfthTaskExecutor.start();
+        FirstTaskExecutor.start();
+        SecondTaskExecutor.start();
+        ThirdTaskExecutor.start();
+        FourthTaskExecutor.start();
+        FifthTaskExecutor.start();
+        SixthTaskExecutor.start();
+        SeventhTaskExecutor.start();
+        EightTaskExecutor.start();
+        NinthTaskExecutor.start();
+        TenthTaskExecutor.start();
+        EleventhTaskExecutor.start();
+        TwelfthTaskExecutor.start();
 
 
     }
