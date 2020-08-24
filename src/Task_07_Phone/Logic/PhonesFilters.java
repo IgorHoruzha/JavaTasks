@@ -12,7 +12,7 @@ public class PhonesFilters {
         for (int i=0;i<phones.length;i++){
             Phone currentPhone=phones[i];
 
-            if (currentPhone.getTalkTime()==minTime){
+            if (currentPhone.getTalkTime()>minTime){
 
                 Phone[] tmpArr= new Phone[resultPhones.length+1];
                 for (int j=0;j<resultPhones.length;j++){

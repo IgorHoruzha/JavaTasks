@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class BusesFilters {
 
-    public Bus[] byFaculty(Bus[] buses, int routeNumber){
+    public Bus[] byRouteNumber(Bus[] buses, int routeNumber){
 
         Bus[] resultBus= new Bus[0];
 
@@ -27,7 +27,7 @@ public class BusesFilters {
         return resultBus;
     }
 
-    static LocalDate tenYears= LocalDate.of(10,0,0);
+
 
     public Bus[] byOperationStartMoreThen10Years(Bus[] buses){
 
@@ -36,7 +36,7 @@ public class BusesFilters {
         for (int i=0;i<buses.length;i++){
             Bus currentBus=buses[i];
 
-            if (currentBus.getOperationStart().isAfter(currentBus.getOperationStart().plusYears(10))){
+            if (currentBus.getOperationStart().plusYears(10).isBefore(LocalDate.now())){
 
                 Bus[] tmpArr= new Bus[resultBus.length+1];
                 for (int j=0;j<resultBus.length;j++){

@@ -33,7 +33,7 @@ public class ProductsFilters {
         for (int i=0;i<products.length;i++){
             Product currentProduct=products[i];
 
-            if (currentProduct.getName().equals(name)&&currentProduct.getPrice()<maxPrice){
+            if (currentProduct.getName().equals(name)&&currentProduct.getPrice()<=maxPrice){
 
                 Product[] tmpArr= new Product[resultProduct.length+1];
                 for (int j=0;j<resultProduct.length;j++){

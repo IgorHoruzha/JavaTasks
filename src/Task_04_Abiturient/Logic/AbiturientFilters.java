@@ -18,7 +18,7 @@ public class AbiturientFilters {
             for (int j = 0; j < currentMarks.length; j++) {
                 int currentMark = currentMarks[j];
 
-                if (currentMark < maxMark) {
+                if (currentMark <= maxMark) {
 
                     Abiturient[] tmpArr = new Abiturient[resultAbiturients.length + 1];
                     for (int q = 0; q < resultAbiturients.length; q++) {
@@ -34,44 +34,43 @@ public class AbiturientFilters {
         return resultAbiturients;
     }
 
-    public Abiturient[] byHigherMarks(Abiturient[] abiturient, int minMark) {
+    public Abiturient[] byHigherAvgMark(Abiturient[] abiturient, int minAvgMark) {
         Abiturient[] resultAbiturients = new Abiturient[0];
 
         for (int i = 0; i < abiturient.length; i++) {
             Abiturient currentAbiturient = abiturient[i];
-
             int[] currentMarks = currentAbiturient.getMarks();
+            int avgMark = 0;
 
-            boolean isAllMarksGood = true;
             for (int j = 0; j < currentMarks.length; j++) {
-                int currentMark = currentMarks[j];
-
-                if (currentMark < minMark) {
-
-                    isAllMarksGood = false;
-                    break;
-                }
+                avgMark += currentMarks[j];
             }
-            if (isAllMarksGood) {
-                Abiturient[] tmpArr = new Abiturient[resultAbiturients.length + 1];
-                for (int q = 0; q < resultAbiturients.length; q++) {
-                    tmpArr[q] = resultAbiturients[q];
-                }
-                tmpArr[tmpArr.length - 1] = currentAbiturient;
-                resultAbiturients = tmpArr;
+
+            avgMark /= currentMarks.length;
+            if (avgMark < minAvgMark) {
+                continue;
             }
+
+            Abiturient[] tmpArr = new Abiturient[resultAbiturients.length + 1];
+            for (int q = 0; q < resultAbiturients.length; q++) {
+                tmpArr[q] = resultAbiturients[q];
+            }
+
+            tmpArr[tmpArr.length - 1] = currentAbiturient;
+            resultAbiturients = tmpArr;
         }
+
         return resultAbiturients;
     }
 
 
-    public Abiturient[] topBeast(Abiturient[] abiturients, int count){
-        Abiturient[] resultAbiturients= new Abiturient[0];
+    public Abiturient[] topBeast(Abiturient[] abiturients, int count) {
+        Abiturient[] resultAbiturients = new Abiturient[0];
 
         int abiturientsLength = abiturients.length;
         Abiturient temp = null;
 
-        for (int i = 0; i < abiturientsLength&&i<count; i++) {
+        for (int i = 0; i < abiturientsLength && i < count; i++) {
             for (int j = 1; j < (abiturientsLength - i); j++) {
                 if (abiturients[j - 1].getAvgMark() > abiturients[j].getAvgMark()) {
                     temp = abiturients[j - 1];
@@ -82,19 +81,19 @@ public class AbiturientFilters {
             }
         }
 
-        int minCount=(abiturientsLength - count);
+        int minCount = (abiturientsLength - count);
 
-        for (int i = abiturientsLength; i < minCount; i--){
+        for (int i = abiturientsLength; i < minCount; i--) {
             Abiturient[] tmpArr = new Abiturient[resultAbiturients.length + 1];
             for (int q = 0; q < resultAbiturients.length; q++) {
                 tmpArr[q] = resultAbiturients[q];
             }
 
-            tmpArr[tmpArr.length - 1] = abiturients[i-1];
+            tmpArr[tmpArr.length - 1] = abiturients[i - 1];
             resultAbiturients = tmpArr;
         }
 
-        return  resultAbiturients;
+        return resultAbiturients;
     }
 
 }

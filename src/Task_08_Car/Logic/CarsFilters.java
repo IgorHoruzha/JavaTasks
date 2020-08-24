@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class CarsFilters {
 
-    public Car[] byFaculty(Car[] cars, String brand){
+    public Car[] byBrand(Car[] cars, String brand){
 
         Car[] resultCars= new Car[0];
 
@@ -27,7 +27,7 @@ public class CarsFilters {
         return resultCars;
     }
 
-    public Car[] byFacultyAndMinReleaseDate(Car[] cars, String brand, LocalDate minReleaseDate){
+    public Car[] byBrandAndMinReleaseDate(Car[] cars, String brand, LocalDate minReleaseDate){
 
         Car[] resultCars= new Car[0];
 

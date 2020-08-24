@@ -31,7 +31,7 @@ public class BooksFilters {
     }
 
 
-    public Book[] byFaculty( Book[] books,String publisher){
+    public Book[] byPublisher( Book[] books,String publisher){
 
         Book[] resultBooks= new Book[0];
 

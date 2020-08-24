@@ -31,7 +31,7 @@ public class HousesFilters {
             House currentHouse=houses[i];
 
             int currentFloor=currentHouse.getFloor();
-            if (currentHouse.getCountRooms()==countRoom&&currentFloor>minFloor&&currentFloor<maxFloor){
+            if (currentHouse.getCountRooms()==countRoom&&currentFloor>=minFloor&&currentFloor<=maxFloor){
 
                 House[] tmpArr= new House[resultHouses.length+1];
                 for (int j=0;j<resultHouses.length;j++){

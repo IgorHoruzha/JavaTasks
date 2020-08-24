@@ -5,25 +5,21 @@ import Task_07_Phone.Models.Phone;
 
 public class PhoneSorter {
 
-
-    public  Phone[] byNameAsc(Phone[] phones){
-
-        Phone[] resultPhones= new Phone[0];
+    public Phone[] byNameAsc(Phone[] phones) {
 
         int phonesLength = phones.length;
         Phone temp = null;
 
         for (int i = 0; i < phonesLength; i++) {
             for (int j = 1; j < (phonesLength - i); j++) {
-                if (phones[j - 1].getName().compareTo(phones[j].getName())<0) {
+                if (phones[j - 1].getName().compareTo(phones[j].getName()) > 0) {
                     temp = phones[j - 1];
                     phones[j - 1] = phones[j];
                     phones[j] = temp;
                 }
-
             }
         }
 
-        return resultPhones;
+        return phones;
     }
 }
