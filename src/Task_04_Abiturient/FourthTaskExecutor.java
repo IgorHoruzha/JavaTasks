@@ -28,7 +28,8 @@ public class FourthTaskExecutor {
         ArrayTools.display(avgGoodMark);
 
         System.out.println("c:");
-
+        Abiturient[] topBeast=  abiturientFilters.topBeast(abiturients,2);
+        ArrayTools.display(topBeast);
         System.out.println("==================");
     }
 }

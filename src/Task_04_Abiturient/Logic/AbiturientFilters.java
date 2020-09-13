@@ -83,7 +83,7 @@ public class AbiturientFilters {
 
         int minCount = (abiturientsLength - count);
 
-        for (int i = abiturientsLength; i < minCount; i--) {
+        for (int i = abiturientsLength; i > minCount; i--) {
             Abiturient[] tmpArr = new Abiturient[resultAbiturients.length + 1];
             for (int q = 0; q < resultAbiturients.length; q++) {
                 tmpArr[q] = resultAbiturients[q];
